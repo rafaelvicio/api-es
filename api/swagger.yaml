@@ -12,6 +12,8 @@ info:
 host: "virtserver.swaggerhub.com"
 basePath: "/rafaelvicio/times-api/1.0.0"
 tags:
+- name: "Games"
+  description: "Operations availables to games"
 - name: "admins"
   description: "Secured Admin-only calls"
 - name: "developers"
@@ -19,6 +21,16 @@ tags:
 schemes:
 - "https"
 paths:
+  /games:
+    get:
+      tags:
+      - "Games"
+      summary: "searchs games"
+      description: "Searchs all games"
+      operationId: "searchGame" 
+      produces:
+      - "application/json"
+      parameters:
   /inventory:
     get:
       tags:
